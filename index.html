@@ -1,156 +1,634 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universe Vibrations - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  </head>
-  <body>
-    
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container">
-        <a href="#" class="logo">Universe Vibrations</a>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="consultation.html">Consultation</a></li>
-          <li><a href="courses.html">Courses</a></li>
-        </ul>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universe Vibrations - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-    <!-- Banner -->
-    <section class="banner">
-      <div class="container">
-        <h1>ASTROLOGY IS A LANGUAGE BETWEEN YOU AND THE SKY</h1>
-      </div>
-    </section>
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex: 1;
+    }
 
-    <!-- Intro Section -->
-    <section class="intro"> <div class="container"> <div class="intro-text"> <img src="kishan-raj.png" alt="Kishan Raj"> <div class="intro-content"> <h2>Hello, I am Kishan Raj</h2>
-      <p>
-        I am a passionate Vedic and Nadi Astrologer, as well as a Data Scientist working in a reputed multinational corporation. With a unique blend of ancient wisdom and analytical precision, I bring over five years of dedicated experience in the field of astrology.
-      </p>
-      <p>
-        I specialize in using time-tested methods such as the Dasha system, planetary transits, divisional charts, and other classical tools to deliver predictions that are not only accurate but deeply personalized. Over the years, I have helped numerous individuals gain clarity in critical aspects of life — including marriage, career, education, foreign travel, and remedies for planetary imbalances.
-      </p>
-      <p>
-        Apart from consultations, I actively share my knowledge through detailed astrology blogs, which have collectively garnered over 1 million views from readers around the globe. These writings reflect my commitment to making Vedic wisdom accessible, understandable, and impactful for modern-day seekers. For me, astrology is more than a profession — it is a calling. My mission is to serve as a cosmic guide, helping people navigate life's uncertainties and align with their soul's true purpose, one celestial map at a time.
-      </p>  
-    
-    <div class="social-links">
-      <a href="https://www.instagram.com/universe_vibrations_astrology" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCNK6x07jeDnMiWGzLoVjHJw" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.quora.com/profile/Kishan-Raj-305" target="_blank"><i class="fab fa-quora"></i></a>
-      <a href="https://medium.com/@kishan-raj" target="_blank"><i class="fab fa-medium"></i></a>
-    </div>
-    
-    </div> </div> </div> </section>
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      padding: 1.2rem 0;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
 
-    <!-- Stats Section -->
-    <section class="stats">
-      <div class="container">
-        <div class="stat-item">
-          <h3>5+</h3>
-          <p>Years of Experience</p>
-        </div>
-        <div class="stat-item">
-          <h3>1mn+</h3>
-          <p>Blog Views</p>
-        </div>
-        <div class="stat-item">
-          <h3>12+</h3>
-          <p>Countries with Clients</p>
-        </div>
-      </div>
-    </section>
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    <!-- Services Section -->
-    <section class="services">
-      <div class="container">
-        <h2>Consultation Services</h2>
-        
-        <a href="consultation.html" class="service-link">
-          <div class="service-item">
-            <img src="marriage.jpg" alt="Marriage Consultation">
-            <div>
-              <h3>Marriage Consultation</h3>
-              <p>Details about your spouse's personality, looks, profession, behavior, marriage timing, and more.</p>
-            </div>
-          </div>
-        </a>
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      padding: 0.5rem 0;
+      transition: all 0.3s ease;
+    }
 
-        <a href="consultation.html" class="service-link">
-          <div class="service-item">
-            <img src="career.jpg" alt="Career Consultation">
-            <div>
-              <h3>Career Consultation</h3>
-              <p>Find the best-suited career, job vs. business, government jobs, and career ups and downs.</p>
-            </div>
-          </div>
-        </a>
+    .navbar .logo:hover {
+      transform: scale(1.05);
+    }
 
-        <a href="consultation.html" class="service-link">
-          <div class="service-item">
-            <img src="foreign.jpg" alt="Foreign Travel Consultation">
-            <div>
-              <h3>Foreign Travel/Settlement</h3>
-              <p>Analysis of foreign travel or settlement possibilities, timing, and direction.</p>
-            </div>
-          </div>
-        </a>
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
 
-        <a href="consultation.html" class="service-link">
-          <div class="service-item">
-            <img src="child.jpg" alt="Child Birth Consultation">
-            <div>
-              <h3>Child Birth Consultation</h3>
-              <p>Detailed analysis of your child's life aspects.</p>
-            </div>
-          </div>
-        </a>
+    .nav-links li {
+      position: relative;
+    }
 
-        <a href="consultation.html" class="service-link">
-          <div class="service-item">
-            <img src="QA.jpg" alt="QA Session">
-            <div>
-              <h3>QA Session</h3>
-              <p>Ask 5 questions related to any aspect of your life.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      transition: all 0.3s ease;
+      position: relative;
+    }
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2>Ready to Explore Your Destiny?</h2>
-        <p>Book a consultation or join our astrology course to unlock the secrets of the stars.</p>
-        <div class="cta-buttons">
-          <a href="consultation.html" class="btn">Book Consultation</a>
-          <a href="courses.html" class="btn">Become an Astrologer</a>
-        </div>
-      </div>
-    </section>
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffdd57;
+      transition: width 0.3s ease;
+    }
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2025 Universe Vibrations. All rights reserved.</p>
-      </div>
-    </footer>
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
-    <!-- Script for Hamburger Menu -->
-    <script>
-      function toggleMenu() {
-        const navLinks = document.getElementById('navLinks');
-        navLinks.classList.toggle('active');
+    .nav-links a:hover {
+      color: #ffdd57;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* Banner */
+    .banner {
+      background: url('banner.jpg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Intro Section - Reorganized Layout */
+    .intro {
+      margin: 3rem 0;
+    }
+
+    .intro-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .intro-title {
+      color: #6a11cb;
+      margin: 0 0 1.5rem 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .intro-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .intro-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2575fc;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .intro-image:hover {
+      transform: scale(1.05);
+    }
+
+    .intro-text {
+      flex: 1;
+    }
+
+    .intro-text p {
+      line-height: 1.7;
+      text-align: left;
+      margin-top: 1rem;
+      hyphens: none;
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-links a {
+      color: #6a11cb;
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #2575fc;
+      transform: translateY(-3px);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
       }
-    </script>
-    
-  </body>
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #6a11cb;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        padding: 0.5rem 0;
+      }
+
+      .banner h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+
+      /* Intro section mobile layout */
+      .intro-container {
+        padding: 1.5rem;
+      }
+
+      .intro-title {
+        font-size: 1.8rem;
+      }
+
+      .intro-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .intro-image {
+        width: 150px;
+        height: 150px;
+      }
+
+      .intro-text p {
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner h1 {
+        font-size: 1.5rem;
+      }
+
+      .intro-container {
+        padding: 1.2rem;
+      }
+
+      .intro-title {
+        font-size: 1.5rem;
+      }
+
+      .intro-image {
+        width: 130px;
+        height: 130px;
+        border-width: 3px;
+      }
+
+      .intro-text p {
+        font-size: 0.95rem;
+      }
+
+      .social-links {
+        gap: 1.2rem;
+      }
+
+      .social-links a {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* Stats Section */
+    .stats {
+      background: white;
+      padding: 2rem 0;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .stats .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 0 1rem;
+      flex: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-item h3 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #6a11cb;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-item p {
+      margin: 0.5rem 0 0;
+      font-weight: 600;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .stats .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .stat-item {
+        padding: 0.5rem;
+        flex: 1 0 40%;
+      }
+
+      .stat-item h3 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stat-item {
+        flex: 1 0 100%;
+      }
+    }
+
+    /* Services Section */
+    .services {
+      margin: 3rem 0;
+    }
+
+    .services h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #6a11cb;
+      font-size: 2rem;
+    }
+
+    .service-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .service-item {
+      background: white;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-item img {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 2px solid #2575fc;
+    }
+
+    .service-item h3 {
+      color: #6a11cb;
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      .service-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .service-item img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem 0;
+      background: linear-gradient(135deg, #e4e8f0 0%, #d1d8e8 100%);
+      border-radius: 8px;
+    }
+
+    .cta-section h2 {
+      color: #6a11cb;
+      font-size: 2rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 2rem 0;
+    }
+
+    .btn {
+      background: #2575fc;
+      color: white;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(37, 117, 252, 0.3);
+    }
+
+    .btn:hover {
+      background: #6a11cb;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(106, 17, 203, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .btn {
+        width: 80%;
+      }
+    }
+
+    /* Footer */
+    .footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: auto;
+    }
+
+    .footer p {
+      margin: 0;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Universe Vibrations</a>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="consultation.html">Consultation</a></li>
+        <li><a href="courses.html">Courses</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="container">
+      <h1>ASTROLOGY IS A LANGUAGE BETWEEN YOU AND THE SKY</h1>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-container">
+        <h2 class="intro-title">Hello, I am Kishan Raj</h2>
+        <div class="intro-content">
+          <img src="kishan-raj.png" alt="Kishan Raj" class="intro-image">
+          <div class="intro-text">
+            <p>
+              I am a passionate Vedic and Nadi Astrologer, as well as a Data Scientist working in a reputed multinational corporation. With a unique blend of ancient wisdom and analytical precision, I bring over five years of dedicated experience in the field of astrology.
+            </p>
+            <p>
+              I specialize in using time-tested methods such as the Dasha system, planetary transits, divisional charts, and other classical tools to deliver predictions that are not only accurate but deeply personalized. Over the years, I have helped numerous individuals gain clarity in critical aspects of life — including marriage, career, education, foreign travel, and remedies for planetary imbalances.
+            </p>
+            <p>
+              Apart from consultations, I actively share my knowledge through detailed astrology blogs, which have collectively garnered over 1 million views from readers around the globe. These writings reflect my commitment to making Vedic wisdom accessible, understandable, and impactful for modern-day seekers. For me, astrology is more than a profession — it is a calling. My mission is to serve as a cosmic guide, helping people navigate life's uncertainties and align with their soul's true purpose, one celestial map at a time.
+            </p>
+            
+            <div class="social-links">
+              <a href="https://www.instagram.com/universe_vibrations_astrology" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCNK6x07jeDnMiWGzLoVjHJw" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.quora.com/profile/Kishan-Raj-305" target="_blank"><i class="fab fa-quora"></i></a>
+              <a href="https://medium.com/@kishan-raj" target="_blank"><i class="fab fa-medium"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="container">
+      <div class="stat-item">
+        <h3>5+</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="stat-item">
+        <h3>1mn+</h3>
+        <p>Blog Views</p>
+      </div>
+      <div class="stat-item">
+        <h3>12+</h3>
+        <p>Countries with Clients</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2>Consultation Services</h2>
+      
+      <a href="consultation.html" class="service-link">
+        <div class="service-item">
+          <img src="marriage.jpg" alt="Marriage Consultation">
+          <div>
+            <h3>Marriage Consultation</h3>
+            <p>Details about your spouse's personality, looks, profession, behavior, marriage timing, and more.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="consultation.html" class="service-link">
+        <div class="service-item">
+          <img src="career.jpg" alt="Career Consultation">
+          <div>
+            <h3>Career Consultation</h3>
+            <p>Find the best-suited career, job vs. business, government jobs, and career ups and downs.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="consultation.html" class="service-link">
+        <div class="service-item">
+          <img src="foreign.jpg" alt="Foreign Travel Consultation">
+          <div>
+            <h3>Foreign Travel/Settlement</h3>
+            <p>Analysis of foreign travel or settlement possibilities, timing, and direction.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="consultation.html" class="service-link">
+        <div class="service-item">
+          <img src="child.jpg" alt="Child Birth Consultation">
+          <div>
+            <h3>Child Birth Consultation</h3>
+            <p>Detailed analysis of your child's life aspects.</p>
+          </div>
+        </div>
+      </a>
+
+      <a href="consultation.html" class="service-link">
+        <div class="service-item">
+          <img src="QA.jpg" alt="QA Session">
+          <div>
+            <h3>QA Session</h3>
+            <p>Ask 5 questions related to any aspect of your life.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Explore Your Destiny?</h2>
+      <p>Book a consultation or join our astrology course to unlock the secrets of the stars.</p>
+      <div class="cta-buttons">
+        <a href="consultation.html" class="btn">Book Consultation</a>
+        <a href="courses.html" class="btn">Become an Astrologer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Universe Vibrations. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script for Hamburger Menu -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
 </html>
